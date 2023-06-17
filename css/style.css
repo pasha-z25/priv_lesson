@@ -19,6 +19,19 @@ button {
   font: inherit;
 }
 
+html {
+  font-family: 'Roboto', sans-serif;
+  font-size: 16px;
+  line-height: 1.25;
+  font-weight: 400;
+  font-style: normal;
+  color: #333;
+}
+
+.hidden {
+  display: none !important;
+}
+
 .container {
   width: 100%;
   max-width: calc(1110px + 2rem);
