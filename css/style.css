@@ -1,3 +1,10 @@
+:root {
+  --color-primary: #f13c6e;
+  --color-lightgray: #efefef;
+  --color-white: #ffffff;
+  --color-black: #000000;
+}
+
 * {
   margin: 0;
   padding: 0;
@@ -21,11 +28,11 @@ button {
 
 html {
   font-family: 'Roboto', sans-serif;
-  font-size: 16px;
-  line-height: 1.25;
+  font-size: 14px;
+  line-height: 1.43;
   font-weight: 400;
   font-style: normal;
-  color: #333;
+  color: #333333;
 }
 
 .hidden {
@@ -41,3 +48,294 @@ html {
   padding-left: 1rem;
   position: relative;
 }
+
+.btn {
+  display: inline-block;
+  border: none;
+  font: inherit;
+  color: inherit;
+  background: unset;
+  text-align: center;
+  line-height: 1.14;
+  min-width: 170px;
+  padding-top: 10px;
+  padding-bottom: 10px;
+  border: 2px solid transparent;
+  border-radius: 40px;
+}
+.btn.white {
+  color: var(--color-black);
+  border-color: var(--color-primary);
+}
+.btn.red {
+  color: var(--color-white);
+  border-color: var(--color-white);
+  background-color: var(--color-primary);
+}
+.btn.small {
+  min-width: 130px;
+  padding-top: 8px;
+  padding-bottom: 8px;
+  line-height: 1.1;
+}
+
+/* ----HEADER-------------------------------------------------------------------------*/
+
+.header .part-up {
+  padding-top: 16px;
+  padding-bottom: 16px;
+  background-color: var(--color-lightgray);
+}
+.header .part-up .nav {
+  display: flex;
+  justify-content: center;
+  gap: 30px;
+  line-height: 1.14;
+}
+
+.header .part-center {
+  padding-top: 20px;
+  padding-bottom: 20px;
+  border-bottom: 1px solid var(--color-lightgray);
+}
+
+.header .part-down {
+  padding-top: 30px;
+  padding-bottom: 30px;
+}
+
+.header .logo {
+  display: flex;
+  align-items: center;
+  gap: 20px;
+  font-size: 36px;
+  line-height: 42px;
+  font-weight: 700;
+  color: var(--color-primary);
+  text-transform: uppercase;
+}
+
+.header .part-center .container {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.header .part-center .contacts {
+  display: flex;
+  align-items: center;
+  gap: 40px;
+}
+
+.header .part-down .nav {
+  display: flex;
+  justify-content: center;
+  gap: 40px;
+  font-size: 16px;
+  line-height: 1.17;
+}
+/* -----------------------------------------------------------------------------------*/
+
+.main-section {
+  padding-top: 190px;
+  padding-bottom: 190px;
+  background: var(--color-primary) url('../images/main-bg.jpg') no-repeat
+    center/cover;
+  color: var(--color-white);
+}
+
+.main-section .text-wrap {
+  max-width: 310px;
+}
+.main-section .main-title {
+  font-size: 48px;
+  line-height: 1.17;
+  font-weight: 700;
+  margin-bottom: 50px;
+}
+.main-section .description {
+  margin-bottom: 50px;
+}
+
+/* -----------------------------------------------------------------------------------*/
+
+.content {
+  padding-top: 80px;
+  padding-bottom: 80px;
+  background-color: var(--color-lightgray);
+}
+.section-title {
+  font-size: 24px;
+  line-height: 1.17;
+  font-weight: 700;
+  margin-bottom: 38px;
+  color: var(--color-black);
+}
+.cards-wrapper {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 30px;
+}
+.cards-wrapper .card {
+  text-align: center;
+  background-color: var(--color-white);
+  flex-basis: calc(25% - (90px / 4));
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 25px;
+}
+.cards-wrapper .card > *:not(:last-child) {
+  margin-bottom: 20px;
+}
+.cards-wrapper .card .image {
+  aspect-ratio: 205/166;
+  max-height: 166px;
+  object-fit: contain;
+}
+.cards-wrapper .card .description {
+  flex-grow: 1;
+}
+.cards-wrapper .card .price {
+  font-size: 21px;
+  line-height: 1.17;
+  font-weight: 500;
+}
+
+.partners-logo {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  gap: 1px;
+  margin-bottom: 80px;
+}
+.partners-logo .logo-item {
+  background-color: var(--color-white);
+  padding: 1rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  min-height: 120px;
+  max-height: 120px;
+  width: calc(25% - 1px);
+}
+
+.promo-wrapper {
+  margin-top: 80px;
+  margin-bottom: 80px;
+  display: flex;
+  justify-content: space-between;
+  gap: 30px;
+}
+.promo-wrapper .card {
+  background-color: var(--color-primary);
+  color: var(--color-white);
+  width: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 35px 45px 35px 40px;
+}
+.promo-wrapper .card .text {
+  max-width: 255px;
+}
+.promo-wrapper .card .title {
+  margin-bottom: 25px;
+  font-size: 18px;
+  line-height: 1.17;
+  font-weight: 700;
+}
+.promo-wrapper .card .description {
+  margin-bottom: 25px;
+}
+
+.promo-wrapper .card .email-input {
+  font: inherit;
+  width: 100%;
+  max-width: 255px;
+  border-radius: 20px;
+  border: none;
+  line-height: 1.2;
+  background-color: var(--color-white);
+  padding: 9px 25px;
+}
+
+/* -----------------------------------------------------------------------------------*/
+
+.footer .part-up {
+  padding-top: 60px;
+  padding-bottom: 60px;
+  border-bottom: 1px solid var(--color-lightgray);
+}
+
+.footer .part-up .container {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 30px;
+}
+
+.footer .part-up .nav-group {
+  width: 25%;
+}
+
+.footer .part-up .nav-title {
+  font-size: 16px;
+  line-height: 1.17;
+  font-weight: 500;
+  margin-bottom: 30px;
+  color: var(--color-black);
+}
+.footer .part-up .nav-group hr {
+  margin-bottom: 25px;
+  border: none;
+  border-bottom: 1px solid var(--color-lightgray);
+}
+.footer .part-up .nav-list {
+  color: #828282;
+  list-style: none;
+}
+.footer .part-up .nav-item:not(:last-child) {
+  margin-bottom: 1rem;
+}
+
+.footer .part-center {
+  padding-top: 35px;
+  padding-bottom: 35px;
+}
+.footer .part-center .container {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+.footer .part-center .socials {
+  display: flex;
+  align-items: center;
+  gap: 20px;
+}
+.footer .part-center .contacts {
+  display: flex;
+  align-items: center;
+  gap: 40px;
+}
+
+.footer .part-down {
+  background-color: var(--color-lightgray);
+  padding-top: 25px;
+  padding-bottom: 25px;
+}
+.footer .part-down .container {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+/* -----------------------------------------------------------------------------------*/
+/* -----------------------------------------------------------------------------------*/
+/* -----------------------------------------------------------------------------------*/
+/* -----------------------------------------------------------------------------------*/
+/* -----------------------------------------------------------------------------------*/
+/* -----------------------------------------------------------------------------------*/
+/* -----------------------------------------------------------------------------------*/
+/* -----------------------------------------------------------------------------------*/
+/* -----------------------------------------------------------------------------------*/
+/* -----------------------------------------------------------------------------------*/
